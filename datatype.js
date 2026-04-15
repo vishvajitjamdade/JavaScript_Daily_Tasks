@@ -36,3 +36,31 @@ console.log(k);
 
 let l = a.repeat(5);
 console.log(l);
+
+let m = a.slice(0,4);
+console.log(m);
+
+//Number Methods
+let n = 567.890345;
+console.log(n);
+console.log(typeof(n));
+
+let o = n.toFixed(2);
+console.log(o);
+
+let p = n.toString();
+console.log(p);
+console.log(typeof(p));
+
+//Boolean
+let q = true;
+console.log(q);
+console.log(typeof(q));
+
+//undefined
+let r;
+console.log(typeof(r));
+
+//null
+let s = null;
+console.log(typeof(s));
