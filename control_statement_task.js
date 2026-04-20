@@ -57,12 +57,12 @@ if (num5 >= 50 && num5 <= 100) {
 // Three digit
 // More than three digits
 
-let num5 = parseInt(prompt("Enter the numbers : "));
+let num_5 = parseInt(prompt("Enter the numbers : "));
 let rev = 0;
 let count = 0;
-while (num5 != 0) {
+while (num_5 != 0) {
     count++;
-    num5 = Math.flooe(num5 / 10);
+    num_5 = Math.flooe(num_5 / 10);
 }
 if (count == 1) {
     console.log("Single digit");
@@ -337,21 +337,21 @@ while (n > 0) {
 
 //4.Reverse a given number
 let num8 = 123;
-let rev = 0;
+let reve = 0;
 while (num8 != 0) {
     let remainder = num8 % 10;
-    rev = rev * 10 + remainder;
+    reve = reve * 10 + remainder;
     num8 = num8 / 10;
 }
 
 //5.Count the number of digits in a given number.
 let num9 = 123;
-let count = 0;
+let count_1 = 0;
 while (num9 != 0) {
-    count++;
+    count_1++;
     num8 = num8 / 10;
 }
-console.log("No of digits are : " + count);
+console.log("No of digits are : " + count_1);
 
 // DO-WHILE
 //1.Display numbers from 1 to 5, ensuring loop runs at least once.
