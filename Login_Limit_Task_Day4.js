@@ -14,16 +14,16 @@ function checkLogin() {
     let inpPassword = document.getElementById("password").value;
     if (username === inpUsername && password === inpPassword) {
         if (count == 3) {
-            console.log("Your Account is blocked! You can't LogIn");
+            window.alert("Your Account is blocked! You can't LogIn");
         } else {
-            console.log("You logged In successfully!");
+            window.alert("You logged In successfully!");
             count = 0;
         }
 
     } else {
         count++;
         if (count == 3) {
-            console.log("your account is blocked");
+            window.alert("your account is blocked");
         }
     }
 }
