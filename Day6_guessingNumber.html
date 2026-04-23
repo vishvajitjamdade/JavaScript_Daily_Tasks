@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Create a number guessing game using a while loop with limited attempts.
+        let attempts = 3;
+        let correctNumber = Math.floor(Math.random() * 10) + 1;
+        while (attempts > 0) {
+            let guessNumber = Number.parseInt(prompt("Enter the number to guess"));
+
+            if (guessNumber === correctNumber) {
+                document.writeln("Congratulations! You have guessed correct number that is : " + correctNumber);
+                break;
+            }
+            else if (correctNumber > guessNumber) {
+                alert("Too Low");
+            }
+            else if (correctNumber < guessNumber) {
+                alert("Too High");
+            }
+            attempts--;
+        }
+
+        if (attempts === 0) {
+            document.writeln("\nGame Over! The correct number was " + correctNumber);
+        }
+    </script>
+</body>
+
+</html>

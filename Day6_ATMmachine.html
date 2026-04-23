@@ -1,0 +1,23 @@
+<!--Build a simple ATM menu using do...while until user chooses exit. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Build a simple ATM menu using do...while until user chooses exit.
+        let choice;
+        do {
+            choice = parseInt(prompt("Menu : \n To Check bank balance enter : 1 \n To withdraw money enter : 2 \n To change password enter : 3 \n To exit enter : 4 \nEnter your next step : "));
+        } while (choice != 4);
+        document.writeln("You have entered 4 to Exit!")
+    </script>
+</body>
+
+</html>
