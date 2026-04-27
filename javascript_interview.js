@@ -19,3 +19,7 @@ console.log(typeof result4); // number
 const result5 = undefined + 5;
 console.log(result5); // NaN
 console.log(typeof result5); // number
+
+let multiply = (a, b = 1) => a * b;
+console.log(multiply(5));
+console.log(multiply(5, 2));
