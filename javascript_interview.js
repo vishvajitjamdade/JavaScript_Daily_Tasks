@@ -8,7 +8,7 @@ const result2 = false + 1;
 console.log(result2); // 1
 console.log(typeof result2); // number
 
-const result3 = 'Hello' + true;
+const result3 = "Hello" + true;
 console.log(result3); // "Hellotrue"
 console.log(typeof result3); // string
 
