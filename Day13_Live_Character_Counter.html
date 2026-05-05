@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <textarea name="" id="text" rows="4" cols="80" placeholder="Type anything..."></textarea>
+    <p id="count">Character Count = 0</p>
+
+    <script>
+        let textarea = document.querySelector("#text");
+        let p = document.querySelector("#count");
+
+        textarea.addEventListener("keyup",() => {
+
+            let characters = textarea.value.trim();
+            let count = textarea.value.length;
+            p.innerText= "Characters Count : " + count;
+        });
+    </script>
+</body>
+</html>
