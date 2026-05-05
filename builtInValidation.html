@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+
+<body>
+    <form action="xyz">
+        <input type="text" required pattern="[a-zA-Z]{2,10}" title="Minimum 2 and Maximum 10 character"
+            placeholder="Enter your last name">
+
+        <br><br>
+
+        <input type="text" pattern="[0-9]{10}" title="Enter exactly 10 digits" required
+            placeholder="Enter 10 digit mobile number">
+            <br><br>
+
+            <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

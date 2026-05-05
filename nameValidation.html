@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="abc">
+        <input type="text" placeholder="Enter your name" id="name" onkeyup="testName()">
+
+        <br><br>
+
+        <span id="msg"></span>
+
+        <br><br>
+
+        <button type="button" onclick="testName()">Submit</button>
+    </form>
+
+    <script>
+        function testName(){
+            let name = document.getElementById("name").value.trim();
+            let msg = document.getElementById("msg");
+
+            let nameRegex = /^[a-zA-Z]{2,20}$/;
+
+            if(name === ""){
+                msg.style.color="red";
+                msg.innerText="This field is required";
+            }
+            else if(nameRegex.test(name)){
+                msg.style.color="green";
+                msg.innerText="correct"
+            }
+            else{
+                msg.style.color="red";
+                msg.innerText="Only letters (2-20) characters";
+            }
+        }
+    </script>
+</body>
+</html>
