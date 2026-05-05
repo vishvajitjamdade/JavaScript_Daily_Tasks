@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="red">Red</button><br><br>
+    <button id="green">Green</button> <br><br>
+    <button id="blue">Blue</button>
+
+    <script>
+        let btn1 = document.querySelector("#red");
+        let btn2 = document.querySelector("#green");
+        let btn3 = document.querySelector("#blue");
+        let body = document.querySelector("body");
+
+        btn1.addEventListener("click",() => {
+            body.style.backgroundColor="red";
+        });
+
+        btn2.addEventListener("click",() => {
+            body.style.backgroundColor="green";
+        });
+
+        btn3.addEventListener("click",() => {
+            body.style.backgroundColor="blue";
+        });
+    </script>
+</body>
+</html>
