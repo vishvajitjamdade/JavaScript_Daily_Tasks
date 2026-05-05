@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="city">
+        <option value="">Select City</option>
+        <option value="Pune">Pune</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Satara">Satara</option>
+    </select>
+
+    <script>
+        let opt = document.querySelector("#city");
+        opt.addEventListener("change",()=>{
+            alert(opt.value);
+        })
+    </script>
+</body>
+
+</html>
