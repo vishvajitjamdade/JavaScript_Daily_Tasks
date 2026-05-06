@@ -18,3 +18,11 @@ else{
 
 //METHOD-2
 console.log(rollno.includes(100));
+
+//METHOD-3
+if(rollno.includes(101)){
+    console.log("Present");
+}
+else{
+    console.log("Not Present");
+}
