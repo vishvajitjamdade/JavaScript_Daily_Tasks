@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="" id="name">
+    <p id="character">Character Count : 0</p>
+    <p id="word">Word Count : </p>
+
+    <script>
+        let inp = document.querySelector("#name");
+        let p1 = document.querySelector("#character");
+        let p2 = document.querySelector("#word");
+        let count = 0;
+
+        inp.addEventListener("keyup", () => {
+            let name = inp.value.trim();
+            let namelen = name.length;
+            p1.innerText = "Character Count : " + namelen;
+            let word = name.split(" ");
+            p2.innerText = " Word Count : " + word.length;
+        });
+    </script>
+</body>
+
+</html>
