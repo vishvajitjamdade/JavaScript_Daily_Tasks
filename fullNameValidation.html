@@ -1,0 +1,40 @@
+<!-- // 1. Create a program that accepts a full name from the user, removes extra spaces from 
+// the beginning, middle, and end of the string, and converts the name into proper format 
+// where the first letter of each word is uppercase and the remaining letters are lowercase. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="name">full name : </label>
+    <input type="text" name="" id="name" placeholder="enter your name...">
+    <p>formatted name : <span id="fullname"></span></p>
+
+    <script>
+        let name = document.querySelector("#name");
+        name.addEventListener("keyup", () => {
+            let ans = name.
+            value.
+            trim().
+            replace(/\s+/g, " ").
+            split(" ").
+            map((word) => {
+                return word.charAt(0).toUpperCase()+
+                       word.slice(1).toLowerCase();
+            }).
+            join(" ");
+            let fullname = document.querySelector("#fullname").innerText = ans;
+        });
+
+    </script>
+</body>
+
+</html>
