@@ -1,0 +1,46 @@
+<!-- // Create a program that takes a string as input and counts the 
+// frequency of each character present in the string. The program 
+// should display each character along with the number of times it appears. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="str"></label>
+    <input type="text" placeholder="enter here something...">
+    <button id="btn">display</button>
+    <p id="p1"></p>
+    <ul>
+
+    </ul>
+
+    <script>
+        let inp = document.querySelector("input");
+        let btn = document.querySelector("#btn");
+        let ul = document.querySelector("ul");
+        var arr;
+        inp.addEventListener("keyup",()=>{
+           var str = inp.value.trim().replaceAll(" ","");
+           arr = str.split("");
+        });
+
+        var map = new Map();
+        btn.addEventListener("click",() => {
+            arr.forEach(element => {
+                map.set(element,(map.get(element) || 0) + 1);
+            });
+
+            document.querySelector("#p1").innerText="count of each character in a string : "
+            for(let [key,value] of map){
+                const li = document.createElement('li');
+                li.innerText=`${key} : ${value}`;
+                ul.appendChild(li);
+            }
+        })
+        console.log(map);
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!-- 6) Write a program that accepts a string and finds the character that 
+appears the maximum number of times. If multiple characters have the 
+same highest frequency, display all of them. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="">String : </label>
+    <input type="text" name="" id="" placeholder="enter something...">
+    <ul>
+
+    </ul>
+    <button>find</button>
+
+    <script>
+        let inp = document.querySelector("input");
+        let btn = document.querySelector("button");
+        let ul = document.querySelector("ul");
+        var str;
+
+        var map = new Map();
+        inp.addEventListener("keyup",() => {
+            str = inp.value.trim().replaceAll(" ","");
+        });
+
+        btn.addEventListener("click",() => {
+            map.clear();
+            arr = str.split("");
+            for(let char of arr){
+                map.set(char,(map.get(char) || 0)+1);
+            }
+            let maxVal = -Infinity;
+            let ch;
+            for(let [key,value] of map){
+                if(value>maxVal){
+                    maxVal = value
+                    ch = key;
+                }
+            }
+
+            let outputArr = [];
+            for(let [key,value] of map){
+                if(value == maxVal){
+                    outputArr.push(`${key} : ${value}`);
+                }
+            }
+
+            for(let val of outputArr){
+                let li = document.createElement('li');
+                li.innerText=val;
+                ul.appendChild(li);
+            }
+        });
+    </script>
+</body>
+</html>

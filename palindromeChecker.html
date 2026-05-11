@@ -1,0 +1,54 @@
+<!-- 
+Develop a palindrome checker program that takes a string input and determines whether 
+it reads the same forward and backward. The program should ignore spaces, special characters, 
+and case differences while checking.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="inp"></label>
+    <input type="text" name="" id="inp" placeholder="enter string...">
+    <h1></h1>
+    <button>check</button>
+
+    <script>
+        let inp = document.querySelector("#inp");
+        let btn = document.querySelector("button");
+        const regex = /[^A-za-z0-9]/g;
+        let h1 = document.querySelector("h1");
+        var str;
+
+        inp.addEventListener("keyup", () => {
+            str = inp.value.trim().replace(" ", "");
+            if (regex.test(str)) {
+                window.alert("Special character found!");
+            }
+        });
+
+        btn.addEventListener("click", () => {
+            let start = 0;
+            let end = str.length-1;
+            while(start<end){
+                if(str.charAt(start) != str.charAt(end)){
+                    h1.innerText=str + " string is not palindrome";
+                    h1.style.color="red";
+                    return;
+                }
+                start++;
+                end--;
+            }
+            h1.innerText=str + " string is palindrome";
+            h1.style.color="green";
+        })
+    </script>
+</body>
+
+</html>
