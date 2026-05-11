@@ -1,0 +1,59 @@
+<!-- 2.Develop a program to validate an email address entered by the user.
+The program should check whether the email contains @, a domain 
+extension such as .com, .in, etc., and ensure that it does not contain 
+any spaces or invalid characters. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="email">Email : </label>
+    <input type="email" name="" id="email" placeholder="enter email...">
+    <p id="ad"></p>
+    <p id="ext"></p>
+    <p id="gmail"></p>
+
+    <script>
+        let email = document.querySelector("#email");
+        let ad = document.querySelector("#ad");
+        const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|edu)$/i;
+        let ext = document.querySelector("#ext");
+        let gmail = document.querySelector("#gmail");
+        email.addEventListener("keyup",() => {
+            let val = email.value.trim().replaceAll(" ","");
+            console.log(val);
+            if(val.includes('@')){
+                ad.innerText="@-correct";
+                ad.style.color="green";
+            }else{
+                ad.innerText="@-required";
+                ad.style.color="red"; 
+            }
+
+            if(val.includes('gmail')){
+                gmail.innerText="gmail-added";
+                gmail.style.color="green";
+            }else{
+                gmail.innerText="gmail-required";
+                gmail.style.color="red"; 
+            }
+
+            if(regex.test(val)){
+                ext.innerText="extension-added";
+                ext.style.color="green";
+            }
+            else{
+                ext.innerText="extension-required";
+                ext.style.color="red";
+            }
+
+        })
+    </script>
+
+</body>
+</html>
