@@ -1,0 +1,36 @@
+<!-- Develop a URL slug generator that converts a given title or sentence into 
+an SEO-friendly URL format by converting all characters to lowercase, 
+removing unnecessary spaces, and replacing spaces with hyphens. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Slug Generator</h2>
+    <input type="text" name="">
+    <p></p>
+    <button>generate slug</button>
+
+    <script>
+        let inp = document.querySelector("input");
+        let result = document.querySelector("p");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click",()=>{
+            let text = inp.value.trim();
+
+            let slug = text.toLocaleLowerCase().
+                            replace(/\s+/g," ").
+                            replace(/ /g,"-").
+                            replace(/[^a-z0-9-]/g,"");
+
+            result.innerText=`Slug: ${slug}`;
+        });
+    </script>
+</body>
+</html>
