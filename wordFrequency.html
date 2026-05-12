@@ -1,0 +1,47 @@
+<!-- Create a program that takes a sentence as input, splits it into words, and counts how many times 
+each word appears in the sentence. The program should ignore case differences while counting. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="" placeholder="enter something...">
+    <ul>
+
+    </ul>
+    <button>show</button>
+
+    <script>
+        let inp = document.querySelector("input");
+        let btn = document.querySelector("button");
+        let ul = document.querySelector("ul");
+        const map = new Map();
+        var arr = [];
+
+        inp.addEventListener("keyup",() => {
+            map.clear();
+            let val = inp.value.trim().toLocaleLowerCase();
+            arr = val.split(" ");
+            for(let word of arr){
+                if(word !== ""){
+                    map.set(word,(map.get(word) || 0) +1);
+                }
+            }
+            
+        });
+
+        btn.addEventListener("click",()=>{
+            for(let [key,value] of map){
+                let li = document.createElement('li');
+                li.innerText=`${key} : ${value} `;
+                ul.appendChild(li);
+            }
+        })
+    </script>
+</body>
+</html>
