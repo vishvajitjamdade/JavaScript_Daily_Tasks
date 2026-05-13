@@ -1,13 +1,13 @@
-function table(num,tableNum){
-    if(num === 10){
-        console.log(num*tableNum);
+function table(num, tableNum) {
+    if (num === 10) {
+        console.log(num * tableNum);
         return;
     }
 
-    console.log(num*tableNum);
-    table(num+1,tableNum);
+    console.log(num * tableNum);
+    table(num + 1, tableNum);
 }
 
-table(1,5);
+table(1, 5);
 
 
